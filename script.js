@@ -1,13 +1,12 @@
-const sections = document.querySelectorAll("section, .hero, .page-section");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
+function showOnScroll() {
+  const targets = document.querySelectorAll(".fade");
+  targets.forEach(sec => {
+    const rect = sec.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.85) {
+      sec.classList.add("visible");
     }
   });
-}, {
-  threshold: 0.2
-});
+}
 
-sections.forEach(sec => observer.observe(sec));
+window.addEventListener("scroll", showOnScroll);
+window.addEventListener("load", showOnScroll);

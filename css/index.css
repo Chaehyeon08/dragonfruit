@@ -1,0 +1,50 @@
+.hero {
+  width: 100%;
+  min-height: 360px;
+  max-height: 500px;
+  height: 45vh;
+
+  background-image: url("../images/home_hero.jpg");
+  background-size: cover;
+  background-position: 50% 30%;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 40px 25px;
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 260px;
+    max-height: 340px;
+    height: 35vh;
+    background-position: center center;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+}

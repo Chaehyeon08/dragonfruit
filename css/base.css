@@ -1,0 +1,124 @@
+/* base.css - add your CSS rules below */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fafafa;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav .logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #3b3b98;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #3b3b98;
+}
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 15px;
+  }
+  nav div {
+    margin-top: 10px;
+  }
+  nav a {
+    margin: 0 10px;
+  }
+}
+
+footer {
+  background: #f1f1f1;
+  padding: 25px;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Animation */
+section, .page-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.9s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 기본 상태: 아래에서 위로 올라오면서 페이드 인 */
+.hero,
+.page-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.9s ease-out;
+}
+
+/* 보이는 상태 */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.9s ease-out;
+}
+
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sticky footer global layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+  padding: 28px 0;
+  text-align: center;
+  background-color: #f3f3f3;
+  font-size: 16px;
+  color: #555;
+  letter-spacing: 0.2px;
+  border-top: 1px solid #e0e0e0;
+}
+
