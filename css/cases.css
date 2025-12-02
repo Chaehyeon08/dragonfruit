@@ -511,3 +511,15 @@ body {
   }
 }
 
+.roadmap-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover; /* 아래 변경됨 */
+  border-radius: 14px;
+  display: block;
+  margin: 20px auto 0 auto;
+  background: #fff;
+}
+
+
+
